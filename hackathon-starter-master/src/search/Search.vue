@@ -4,6 +4,7 @@
         <h1>Get halp!</h1>
         <h3>What do you need halp with</h4>
         <br>
+        {{numSkills}}
         <select>
           <option value="babysitting">Babysitting</option>
           <option value="lawn-mowing">Lawn Mowing</option>
@@ -33,6 +34,22 @@ export default {
       popularItems: [],
       recentItems: []
     }
+  },
+
+  ready () {
+      var skills = firebase.database().ref('skills').orderByKey();
+    //   console.log(skills);
+      skills.once('value').then(function(snapshot) {
+          var skillList = snapshot.val();
+          var numSkills = Object.keys(skillList).length;
+
+        // var users = snapshot.val()
+        // var numUsers = Object.keys(users).length;
+        // var keys = Object.keys(users);
+        // for (var i = 0; i < numUsers; i++) {
+        //   console.log(users[values[i]]);
+        // } 
+      });
   },
 
   created() {
