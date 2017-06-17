@@ -52,8 +52,10 @@ export class Auth {
     var provider;
     if (provider === 'fb') {
       provider = new firebase.auth.FacebookAuthProvider();
-    } else {
+    } else if (provider === 'twitter') {
       provider = new firebase.auth.TwitterAuthProvider();
+    } else {
+      provider = new firebase.auth.GoogleAuthProvider();
     }
 
     return firebase.auth().signInWithPopup(provider).then(function(result) {

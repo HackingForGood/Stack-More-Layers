@@ -18,6 +18,9 @@
             <br>
             <br>
             <a class="btn" style="background:#04A4FF; color: white" v-on:click="login('twitter')">Login with Twitter</a>
+            <br>
+            <br>
+            <a class="btn" style="background:#04A4FF; color: white" v-on:click="login('google')">Login with Google</a>
           </div>
         </modal>
 
