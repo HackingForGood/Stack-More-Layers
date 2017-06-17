@@ -2,7 +2,7 @@
     <div>
       <div class="hero tac">
         <h1>Add a skill!</h1>
-        <h3>What do you want to halp with</h4>
+        <h3>What do you want to halp with?</h4>
         <br>
         <form>
           <input type="text" name="skill" value="Skill" v-model="skill"><br><br>
@@ -11,7 +11,7 @@
         <p> </p>
         <!--<p> </p>-->
         <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find some halp!" @click="addSkill">Find Halp!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Provide some halp!" @click="addSkill">Submit Skill</a>
         </div>
       </div>
     </div>
