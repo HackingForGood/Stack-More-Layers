@@ -5,7 +5,7 @@
         <h3>What do you want to halp with</h4>
         <br>
         <form>
-          <input type="text" name="skill" value="Skill"><br><br>
+          <input type="text" name="skill" value="Skill" v-model="skill"><br><br>
         </form>
         <br>
         <p> </p>
@@ -23,13 +23,24 @@ import itemService from '../ItemService.js';
 import ItemTile from '../ItemTile.vue';
 
 export default {
-  components: { ItemTile },
+  // components: { ItemTile },
 
-  data () {
+  data: function() {
     return {
-      name: 'Home',
-      popularItems: [],
-      recentItems: []
+      skill: 'a',
+      // userId: 'm7v9zLbVzXYAFeK1bXOl42ryhL92'
+    }
+  },
+
+  route: {
+    data: function (transition) {
+      var self = this;
+      // userId = firebase.auth().currentUser.uid;
+      // userId = 'm7v9zLbVzXYAFeK1bXOl42ryhL92';
+
+      // firebase.database().ref('/users/' + userId + '/skills').set({
+      //   skills: [skill]
+      // });
     }
   },
 
@@ -45,8 +56,8 @@ export default {
         this.$dispatch('openLoginDialogEvent')
       }
     },
-    addSkill() {
-      console.log('TODO add skill');
+    addSkill(data) {
+      console.log('asdf');
     }
   }
 }
