@@ -14,6 +14,12 @@
 
           </a>
         </div>
+        <br>
+        <br>
+        <p> </p>
+        <div>
+          <a class="btn  btn--light hint--bottom  small-create-btn" aria-label="Learn about us!" @click="aboutClick">About Us</a>
+        </div>
       </div>
     </div>
 </template>
@@ -42,6 +48,13 @@ export default {
     onCreateClick() {
       if (auth.isLoggedIn) {
         this.$route.router.go({ name: 'search' });
+      } else {
+        this.$dispatch('openLoginDialogEvent')
+      }
+    },
+    aboutClick() {
+      if (auth.isLoggedIn) {
+        this.$route.router.go({ name: 'about' });
       } else {
         this.$dispatch('openLoginDialogEvent')
       }
