@@ -8,8 +8,8 @@
         <p> </p>
         <!--<p> </p>-->
         <div>
-
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Add another skill!" @click="onCreateClick">Halp Someone!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get halp!" @click="gethelpClick">Get Halp!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Add another skill!" @click="addskillClick">Halp Someone!</a>
         </div>
       </div>
     </div>
@@ -47,9 +47,16 @@ export default {
   },
 
   methods: {
-    onCreateClick() {
+    addskillClick() {
       if (auth.isLoggedIn) {
         this.$route.router.go({ name: 'addskill' });
+      } else {
+        this.$dispatch('openLoginDialogEvent')
+      }
+    },
+    gethelpClick() {
+      if (auth.isLoggedIn) {
+        this.$route.router.go({ name: 'search' });
       } else {
         this.$dispatch('openLoginDialogEvent')
       }
