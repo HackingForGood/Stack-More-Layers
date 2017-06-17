@@ -9,7 +9,7 @@
         <!--<p> </p>-->
         <div>
           <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find a friend!" @click="onCreateClick">Get Halp</a>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Help a friend!" @click="onCreateClick">Offer Halp</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Help a friend!" @click="helpFriend">Offer Halp</a>
           <!--<a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get the source" href="https://github.com/chinchang/vuejsfire-hackathon-starter/">-->
 
           </a>
@@ -42,6 +42,13 @@ export default {
     onCreateClick() {
       if (auth.isLoggedIn) {
         this.$route.router.go({ name: 'search' });
+      } else {
+        this.$dispatch('openLoginDialogEvent')
+      }
+    },
+    helpFriend() {
+      if (auth.isLoggedIn) {
+        this.$route.router.go({ name: 'addskill' });
       } else {
         this.$dispatch('openLoginDialogEvent')
       }

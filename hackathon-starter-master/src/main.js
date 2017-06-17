@@ -9,6 +9,7 @@ import About from './About.vue';
 import Search from './search/Search.vue';
 import Results from './results/Results.vue';
 import People from './people/People.vue';
+import AddSkill from './addskill/AddSkill.vue';
 
 Vue.use(VueRouter);
 
@@ -59,6 +60,10 @@ router.map({
   '/item/:itemId/edit': {
     name: 'edit',
     component: Edit,
+  },
+  '/addskill': {
+    name: 'addskill',
+    component: AddSkill
   },
   '/item/:itemId': {
     name: 'item',
