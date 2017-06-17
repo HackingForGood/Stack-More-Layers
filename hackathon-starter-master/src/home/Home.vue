@@ -8,8 +8,8 @@
         <p> </p>
         <!--<p> </p>-->
         <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find a friend!" @click="onCreateClick">Get Help</a>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Help a friend!" @click="onCreateClick">Offer Help</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find a friend!" @click="onCreateClick">Get Halp</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Help a friend!" @click="onCreateClick">Offer Halp</a>
           <!--<a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get the source" href="https://github.com/chinchang/vuejsfire-hackathon-starter/">-->
 
           </a>

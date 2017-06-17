@@ -37,6 +37,9 @@ router.map({
   '/about': {
     component: About
   },
+  '/search': {
+    component: Search
+  },
   '/item/new/edit': {
     name: 'new',
     component: Edit,
