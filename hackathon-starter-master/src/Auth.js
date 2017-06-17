@@ -12,9 +12,9 @@ export class Auth {
     // Initialize Firebase
     // Change parameters according to your firebase config
     var config = {
-      apiKey: "AIzaSyC1DkebpFDcclAFDpt2zbu_mcFTi9tRnA8",
-      authDomain: "cool-project-9a463.firebaseapp.com",
-      databaseURL: "https://cool-project-9a463.firebaseio.com",
+      apiKey: "AIzaSyB15bnyZ3t57S3POCUycKHQkvYiosawLcU",
+      authDomain: "project-halp.firebaseapp.com",
+      databaseURL: "https://project-halp.firebaseio.com/",
       storageBucket: "",
     };
     firebase.initializeApp(config);
