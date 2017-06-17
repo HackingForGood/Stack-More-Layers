@@ -6,9 +6,9 @@
         <br>
 
         <select id="skill">
-          <option value="babysitting">Babysitting</option>
+          <!--<option value="babysitting">Babysitting</option>
           <option value="Lawn Mowing">Lawn Mowing</option>
-          <option value="snow-blowing">Snow Blowing</option>
+          <option value="snow-blowing">Snow Blowing</option>-->
         </select>
         <br>
         <p> </p>
@@ -45,13 +45,16 @@ export default {
           var skillData = snapshot.val();
           var numSkills = Object.keys(skillData).length;
           var skillList = Object.keys(skillData);
-          console.log(skillList);
-        // var users = snapshot.val()
-        // var numUsers = Object.keys(users).length;
-        // var keys = Object.keys(users);
-        for (var i = 0; i < numSkills; i++) {
-          console.log(skillList[i]);
-        } 
+          console.log(skillList[0]);
+
+          var list = document.getElementById("skill");
+
+            for (var i = 0; i < numSkills; i++) {
+                var option = document.createElement("option");
+                option.text = skillList[i];
+                option.value = skillList[i];
+                list.appendChild(option);
+            } 
       });
   },
 
