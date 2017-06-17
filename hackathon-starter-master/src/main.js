@@ -10,6 +10,7 @@ import Search from './search/Search.vue';
 import Results from './results/Results.vue';
 import People from './people/People.vue';
 import AddSkill from './addskill/AddSkill.vue';
+import SkillAdded from './addskill/SkillAdded.vue';
 
 Vue.use(VueRouter);
 
@@ -64,6 +65,10 @@ router.map({
   '/addskill': {
     name: 'addskill',
     component: AddSkill
+  },
+  '/skilladded': {
+    name: 'skilladded',
+    component: SkillAdded
   },
   '/item/:itemId': {
     name: 'item',
