@@ -10,15 +10,17 @@
         </div>
         <select>
           <option value="babysitting">Babysitting</option>
-          <option value="lawn-mowing">Lawn Mowing</option>
+          <option value="Lawn Mowing">Lawn Mowing</option>
           <option value="snow-blowing">Snow Blowing</option>
         </select>
         <br>
         <p> </p>
         <!--<p> </p>-->
-        <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="onCreateClick">Find Halp!</a>
+        <div id="help-button">
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="getHelp">Find Halp!</a>
         </div>
+        <table id="results">
+        </table>
       </div>
     </div>
 </template>
@@ -70,6 +72,32 @@ export default {
     },
     addSkill() {
       console.log('TODO add skill');
+    },
+    getHelp() {
+      var e = document.getElementById("skill");
+      var skill = e.options[e.selectedIndex].value;
+      var table = document.getElementById("results");
+
+      console.log(skill);
+
+      var usersRef = firebase.database().ref('users');
+      usersRef.once('value').then(function(snapshot) {
+        var users = snapshot.val()
+        var numUsers = Object.keys(users).length;
+        var keys = Object.keys(users);
+        for (var i = 0; i < numUsers; i++) {
+          if ("skills" in users[keys[i]])
+            if (skill in users[keys[i]]["skills"]) {
+              console.log(users[keys[i]])
+              var row = document.createElement("tr");
+              var cell = document.createElement("td");    
+              var cellText = document.createTextNode(users[keys[i]]["displayName"]);
+              cell.appendChild(cellText);
+              row.appendChild(cell);
+              table.appendChild(row);
+            }
+        } 
+      });
     }
   }
 }
