@@ -1,8 +1,8 @@
 <template>
     <div>
       <div class="hero tac">
-        <h1>VuejsFire Hackathon Starter</h1>
-        <h3>The most beautiful and quick hackathon starter kit</h3>
+        <h1>Get the help you need</h1>
+        <h3>Project Halp connects you with people you know</h3>
         <br>
         <div>
           <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Lets create" @click="onCreateClick">Begin</a>
