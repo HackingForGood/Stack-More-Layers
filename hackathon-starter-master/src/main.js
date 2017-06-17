@@ -6,8 +6,8 @@ import User from './user/User.vue';
 import Item from './item/Item.vue';
 import Edit from './edit/Edit.vue';
 import About from './About.vue';
-import Search from './Search.vue';
-import Results from './Results.vue';
+import Search from './search/Search.vue';
+import Results from './results/Results.vue';
 
 Vue.use(VueRouter);
 
