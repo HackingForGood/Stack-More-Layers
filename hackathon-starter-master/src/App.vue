@@ -41,7 +41,7 @@
     <div class="content-wrap">
       <router-view transition="fade-in" transition-mode="out-in"></router-view>
     </div>
-    <footer>
+    <!--<footer>
       <div>
         &copy; 20XX Kushagra Gour
       </div>
@@ -54,7 +54,7 @@
           </svg>
         </a>
       </div>
-    </footer>
+    </footer>-->
 
     <notifications></notifications>
 
@@ -260,9 +260,10 @@ header, footer {
   }
 }
 header {
-  background: radial-gradient(rgba(0,0,0,0.10) 15%, transparent 16%) 0 0, radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  /*background: radial-gradient(rgba(0,0,0,0.10) 15%, transparent 16%) 0 0, radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;*/
   background-size: 16px 16px;
-  background-color: var(--brand-color);
+  /*background-color: var(--brand-color);*/
+  background-color: #C5E0DC;
 }
 .header__logo-wrap {
   position: relative;
