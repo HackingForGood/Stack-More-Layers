@@ -1,0 +1,41 @@
+{
+  "friends": {
+    "bob": [
+      "bill",
+      "jim"
+    ],
+    "bill": [
+      "bob",
+      "jim"
+    ],
+    "jim": [
+      "bob",
+      "paul",
+      "bill"
+    ],
+    "paul": [
+      "april",
+      "bertha",
+      "jim",
+      "derek",
+      "david"
+    ],
+    "bertha": [
+      "paul"
+    ],
+    "april": [
+      "paul",
+      "derek",
+      "david"
+    ],
+    "derek": [
+      "paul",
+      "april"
+    ],
+    "david": [
+      "paul",
+      "april"
+    ],
+    "callie": []
+  }
+}
