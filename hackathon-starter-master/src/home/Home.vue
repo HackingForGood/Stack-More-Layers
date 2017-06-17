@@ -41,7 +41,7 @@ export default {
   methods: {
     onCreateClick() {
       if (auth.isLoggedIn) {
-        this.$route.router.go({ name: 'new' });
+        this.$route.router.go({ name: 'search' });
       } else {
         this.$dispatch('openLoginDialogEvent')
       }

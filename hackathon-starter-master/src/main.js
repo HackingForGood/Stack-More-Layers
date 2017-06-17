@@ -40,7 +40,12 @@ router.map({
     component: About
   },
   '/search': {
+    name: 'search',
     component: Search
+  },
+  '/results': {
+    name: 'results',
+    component: Results
   },
   '/item/new/edit': {
     name: 'new',
