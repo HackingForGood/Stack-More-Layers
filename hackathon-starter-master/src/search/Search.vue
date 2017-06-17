@@ -4,7 +4,10 @@
         <h1>Get halp!</h1>
         <h3>What do you need halp with</h4>
         <br>
-        {{numSkills}}
+        {{skillList}}
+        <div id="skillz" name="skillz">
+
+        </div>
         <select>
           <option value="babysitting">Babysitting</option>
           <option value="lawn-mowing">Lawn Mowing</option>
@@ -40,15 +43,16 @@ export default {
       var skills = firebase.database().ref('skills').orderByKey();
     //   console.log(skills);
       skills.once('value').then(function(snapshot) {
-          var skillList = snapshot.val();
-          var numSkills = Object.keys(skillList).length;
-
+          var skillData = snapshot.val();
+          var numSkills = Object.keys(skillData).length;
+          var skillList = Object.keys(skillData);
+          console.log(skillList);
         // var users = snapshot.val()
         // var numUsers = Object.keys(users).length;
         // var keys = Object.keys(users);
-        // for (var i = 0; i < numUsers; i++) {
-        //   console.log(users[values[i]]);
-        // } 
+        for (var i = 0; i < numSkills; i++) {
+          console.log(skillList[i]);
+        } 
       });
   },
 
