@@ -13,7 +13,7 @@
         <p> </p>
         <!--<p> </p>-->
         <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="get help now">Find Halp!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="onCreateClick">Find Halp!</a>
         </div>
       </div>
     </div>

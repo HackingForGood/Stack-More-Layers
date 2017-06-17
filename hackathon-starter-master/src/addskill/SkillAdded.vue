@@ -1,18 +1,15 @@
 <template>
     <div>
       <div class="hero tac">
-        <h1>Add a skill!</h1>
-        <h3>What do you want to halp with?</h4>
+        <h1>You have added a skill!</h1>
+        <h3>What do you want to do now?</h4>
         <br>
-        <form>
-          <input type="text" name="skill" id="skill" value="Skill" v-model="skill"><br><br>
-        </form>
         <br>
         <p> </p>
         <!--<p> </p>-->
         <div>
 
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Provide some halp!" @click="onCreateClick">Halp Someone!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Add another skill!" @click="onCreateClick">Halp Someone!</a>
         </div>
       </div>
     </div>
@@ -52,7 +49,7 @@ export default {
   methods: {
     onCreateClick() {
       if (auth.isLoggedIn) {
-        this.$route.router.go({ name: 'skilladded' });
+        this.$route.router.go({ name: 'addskill' });
       } else {
         this.$dispatch('openLoginDialogEvent')
       }
