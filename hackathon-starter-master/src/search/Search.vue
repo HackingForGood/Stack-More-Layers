@@ -16,7 +16,7 @@
         <div id="help-button">
           <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="getHelp">Find Halp!</a>
         </div>
-        <table id="results">
+        <table id="results" style="margin-top: 20px">
         </table>
       </div>
     </div>
@@ -82,9 +82,20 @@ export default {
 
       var usersRef = firebase.database().ref('users');
       usersRef.once('value').then(function(snapshot) {
+
+        while (table.firstChild) {
+          table.removeChild(table.firstChild);
+        }
         var users = snapshot.val()
         var numUsers = Object.keys(users).length;
         var keys = Object.keys(users);
+        var row = document.createElement("tr");
+        var cell = document.createElement("td");    
+        var cellText = document.createTextNode(skill + ":");
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        table.appendChild(row);
+
         for (var i = 0; i < numUsers; i++) {
           if ("skills" in users[keys[i]])
             if (skill in users[keys[i]]["skills"]) {
