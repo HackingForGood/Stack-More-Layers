@@ -1,15 +1,19 @@
 <template>
     <div>
       <div class="hero tac">
-        <h1>I want halp!</h1>
-        <h3>What do you want halp with</h3>
+        <h1>Get halp!</h1>
+        <h3>What do you need halp with</h4>
         <br>
+        <select>
+          <option value="babysitting">Babysitting</option>
+          <option value="lawn-mowing">Lawn Mowing</option>
+          <option value="snow-blowing">Snow Blowing</option>
+        </select>
         <br>
         <p> </p>
         <!--<p> </p>-->
         <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find some halp!" @click="onClickSearch">Find Halp!</a>
-
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Get some halp!" @click="get help now">Find Halp!</a>
         </div>
       </div>
     </div>
@@ -42,6 +46,9 @@ export default {
       } else {
         this.$dispatch('openLoginDialogEvent')
       }
+    },
+    addSkill() {
+      console.log('TODO add skill');
     }
   }
 }
