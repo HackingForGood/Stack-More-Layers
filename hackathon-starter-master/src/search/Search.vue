@@ -4,11 +4,8 @@
         <h1>Get halp!</h1>
         <h3>What do you need halp with</h4>
         <br>
-        {{skillList}}
-        <div id="skillz" name="skillz">
 
-        </div>
-        <select>
+        <select id="skill">
           <option value="babysitting">Babysitting</option>
           <option value="Lawn Mowing">Lawn Mowing</option>
           <option value="snow-blowing">Snow Blowing</option>
