@@ -5,13 +5,13 @@
         <h3>What do you want to halp with</h4>
         <br>
         <form>
-          <input type="text" name="skill" value="Skill" v-model="skill"><br><br>
+          <input type="text" name="skill" id="skill" value="Skill" v-model="skill"><br><br>
         </form>
         <br>
         <p> </p>
         <!--<p> </p>-->
         <div>
-          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find some halp!" @click="addSkill">Find Halp!</a>
+          <a class="btn  btn--light hint--bottom  big-create-btn" aria-label="Find some halp!" @click="addSkill">Halp Someone!</a>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
 
   data: function() {
     return {
-      skill: 'a',
+      skill: '',
       // userId: 'm7v9zLbVzXYAFeK1bXOl42ryhL92'
     }
   },
@@ -35,7 +35,7 @@ export default {
   route: {
     data: function (transition) {
       var self = this;
-      // userId = firebase.auth().currentUser.uid;
+      // var userId = firebase.auth().currentUser.uid;
       // userId = 'm7v9zLbVzXYAFeK1bXOl42ryhL92';
 
       // firebase.database().ref('/users/' + userId + '/skills').set({
@@ -57,7 +57,11 @@ export default {
       }
     },
     addSkill(data) {
-      console.log('asdf');
+      var skill = document.getElementById('skill').value;
+      // var skill = data.skill
+      var userId = firebase.auth().currentUser.uid;
+      firebase.database().ref('/users/' + userId + '/skills/' + skill).set('True');
+      firebase.database().ref('/skills/' + skill).set('True');
     }
   }
 }
