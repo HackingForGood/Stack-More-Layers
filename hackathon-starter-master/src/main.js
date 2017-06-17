@@ -8,6 +8,7 @@ import Edit from './edit/Edit.vue';
 import About from './About.vue';
 import Search from './search/Search.vue';
 import Results from './results/Results.vue';
+import People from './people/People.vue';
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,10 @@ router.map({
   '/search': {
     name: 'search',
     component: Search
+  },
+  '/people': {
+    name: 'people',
+    component: People
   },
   '/results': {
     name: 'results',
